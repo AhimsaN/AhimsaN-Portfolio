@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="AhimsaN Portfolio">
+    <meta name="author" content="Ahimsa Nandiwardhana">
+    <meta name="keywords" content="AhimsaN, Portfolio,Illustration, E-wayang">
+    
+    <title>Contact - AhimsaN </title>
+
+    <base href="/">
+    <link rel="icon" type="image/jpg" sizes="192x192" href="assets/images/favicon-96x96.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="assets/stylesheets/core.css" rel="stylesheet" />
+    <link href="assets/stylesheets/header.css" rel="stylesheet" />
+    <link href="assets/stylesheets/index.main.css" rel="stylesheet"/>
+    <link href="assets/stylesheets/site.css" rel="stylesheet"/>
+    <link href="assets/stylesheets/footer.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+        <div class="bg-img">
+            <h1 class="AhimsaN">AhimsaN </h1>
+          <div class="navbar-right">
+                    <a href="/">About</a>
+                  <a href="Illustration.html">Illustration</a>
+                  <a href="E-Wayang.html">E-Wayang</a>
+                  <a class="active" href="contact.html">Contact</a>
+          </div>
+      </div>
+    </div>
+    </header>
+
+
+    <section class="Section">
+        <h2 class="Page_Name">Contact</h2>
+  </section>
+
+<main class="container">
+       <div class="content">
+    <img class="avatar" src="/assets/images/LOGO BARU putih.png ">
+    <p>Feel free to reach me </p>
+    <p><b>Contact and Social Media :</b><br>
+
+    <div class="Icon">
+        <div class="icon_1" >
+       <a href="https://www.instagram.com/ahimsa_n_" target="_newtab"> <img  class="icon_image" src="/assets/icons/insta.png" title="Instagram" > </a> <p class="icon_text">  @ahimsa_n_</p>
+    </div>
+    <div class="icon_2">
+       <a href="https://www.artstation.com/ahimsa_n" target="_newtab" > <img class="icon_image" src="/assets/icons/artstation.png" title="Artstation">  </a> <p class="icon_text">  ahimsa_n</p>
+    </div>
+    <div class="icon_3">
+       <a href="mailto:ahimsan@protonmail.com"> <img class="icon_image" src="/assets/icons/email.png" title="E-mail"> </a>  <p class="icon_text"> AhimsaN@protonmail.com</p>
+    </div>
+    </div>
+  
+</main>
+<main class="Contact Form">
+    <form name="submit-to-google-sheet">
+<h2>Contact Me</h2>
+<section class="name">
+<label class="label">Name</label><input name="name"class="input" placeholder="Your Name..."> </section>
+<section class="email">
+    <label class="label">Email</label><input name="email"class="input" placeholder="Your Email..." required> </section>
+    <section class="Message">
+        <label class="label">Message</label><textarea name="message" class="input" placeholder="Write Something..." style="height:50px"></textarea> </section>
+        <button class="button"> Send</button>
+</form>
+
+<script>
+  
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw4Nee_pe3Iyyiol5gnw70TV9zZMHA_7wf8iVe6iZuI_QXfGZKfzyguNuc2NIeLU4kL/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+                
+    })
+   </script>
+</main>
+
+
+
+<footer>
+    <div class=footer>
+    <p>Ahimsa Nandiwardhana © 2021
+    </div>
+</footer>
+</body>
+
+
+</html>
